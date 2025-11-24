@@ -6,6 +6,7 @@ public class WeatherStation {
         CurrentConditionDisplay currentDisplay = new CurrentConditionDisplay(weatherData);
         StaticsDisplay staticsDisplay = new StaticsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+        HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
 
         weatherData.setMeasurements(80, 65, 30.4f);
         weatherData.setMeasurements(82, 70, 29.2f);
