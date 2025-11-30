@@ -8,20 +8,20 @@ public class ForecastDisplay implements Observer, DisplayElement {
 		weatherData.registerObserver(this);
 	}
 
-	public void update(float temp, float humidity, float pressure) {
-        lastPressure = currentPressure;
-		currentPressure = pressure;
+	public void update() {
+		this.lastPressure = this.currentPressure;
+		this.currentPressure = weatherData.getPressure();
 
 		display();
 	}
 
 	public void display() {
 		System.out.print("予報: ");
-		if (currentPressure > lastPressure) {
+		if (this.currentPressure > this.lastPressure) {
 			System.out.println("天候は良くなります！");
-		} else if (currentPressure == lastPressure) {
+		} else if (this.currentPressure == this.lastPressure) {
 			System.out.println("ほとんど同じです");
-		} else if (currentPressure < lastPressure) {
+		} else if (this.currentPressure < this.lastPressure) {
 			System.out.println("寒い雨模様の天候に注意してください");
 		}
 	}

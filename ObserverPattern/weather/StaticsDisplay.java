@@ -10,16 +10,17 @@ public class StaticsDisplay implements Observer, DisplayElement {
         weatherData.registerObserver(this);
     }
 
-    public void update(float temperature, float humidity, float pressure) {
+    public void update() {
+        float temperature = weatherData.getTemperture();
         temperatureSum += temperature;
         numReadings++;
 
         if (temperature > maxTemperature) {
-            maxTemperature = temperature;
+            this.maxTemperature = temperature;
         }
 
         if (temperature < minTemperature) {
-            minTemperature = temperature;
+            this.minTemperature = temperature;
         }
 
         display();
