@@ -1,6 +1,6 @@
 package factory.pizza_firm;
 
-public class ChicagoStylePizzaStore extends PizzaStore {
+public class ChicagoPizzaStore extends PizzaStore {
     public Pizza createPizza(String type) {
         if (type.equals("チーズ")) {
             return new ChicagoStyleCheesePizza();
