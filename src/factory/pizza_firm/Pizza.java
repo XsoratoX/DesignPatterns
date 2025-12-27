@@ -10,7 +10,7 @@ public abstract class Pizza {
     List<String> toppings = new ArrayList<String>();
 
     public void prepare() {
-        System.out.println(name + "をした準備");
+        System.out.println(name + "を下準備");
         System.out.println("生地をこねる");
         System.out.println("ソースを追加");
         System.out.println("トッピングを追加: ");

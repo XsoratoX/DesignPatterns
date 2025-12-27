@@ -1,7 +1,6 @@
 public class Mocha extends CondimentDecorator {
     public Mocha(Beverage beverage) {
         this.beverage = beverage;
-        this.setSize(beverage.getSize());
     }
 
     public String getDescription() {

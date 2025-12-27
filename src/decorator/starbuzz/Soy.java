@@ -1,7 +1,6 @@
 public class Soy extends CondimentDecorator {
     public Soy(Beverage beverage) {
         this.beverage = beverage;
-        this.setSize(beverage.getSize());
     }
 
     public String getDescription() {

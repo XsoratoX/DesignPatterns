@@ -1,7 +1,6 @@
 public class Milk extends CondimentDecorator {
     public Milk(Beverage beverage) {
         this.beverage = beverage;
-        this.setSize(beverage.getSize());
     }
 
     public String getDescription() {
